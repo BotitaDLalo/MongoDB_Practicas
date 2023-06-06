@@ -1,0 +1,104 @@
+¡Claro! Aquí tienes un ejemplo real para crear una base de datos MongoDB donde podrás aplicar los conceptos más importantes. En este caso, crearemos una base de datos para una tienda en línea que almacena información sobre productos, categorías y clientes. Vamos paso a paso:
+
+Paso 1: Instalación de MongoDB
+Antes de comenzar, asegúrate de tener MongoDB instalado en tu sistema. Puedes seguir la documentación oficial de MongoDB para obtener instrucciones sobre cómo instalarlo en tu sistema operativo.
+
+Paso 2: Crear una base de datos y colecciones
+Abre una terminal o una línea de comandos y ejecuta el siguiente comando para iniciar el shell de MongoDB:
+
+```
+mongo
+```
+
+Una vez en el shell de MongoDB, puedes crear una nueva base de datos utilizando el comando `use`:
+
+```
+use tienda_en_linea
+```
+
+Esto creará una base de datos llamada "tienda_en_linea" (si aún no existe) y la seleccionará para su uso. A continuación, crearemos tres colecciones: "productos", "categorias" y "clientes".
+
+```
+db.createCollection("productos")
+db.createCollection("categorias")
+db.createCollection("clientes")
+```
+
+Paso 3: Insertar datos en las colecciones
+Ahora que tenemos nuestras colecciones, podemos insertar algunos datos de ejemplo. Utilizaremos el método `insertOne` para insertar un documento a la vez en cada colección.
+
+Para la colección "productos":
+
+```
+db.productos.insertOne({
+  nombre: "Camiseta",
+  precio: 19.99,
+  categoria: "Ropa",
+  stock: 50
+})
+```
+
+Para la colección "categorias":
+
+```
+db.categorias.insertOne({
+  nombre: "Ropa",
+  descripcion: "Ropa para hombres, mujeres y niños"
+})
+```
+
+Para la colección "clientes":
+
+```
+db.clientes.insertOne({
+  nombre: "Juan Pérez",
+  email: "juan@example.com",
+  direccion: "Calle Principal 123"
+})
+```
+
+Paso 4: Consultar datos
+Ahora que hemos insertado datos en nuestras colecciones, podemos consultarlos para recuperar la información. Aquí hay algunos ejemplos de consultas básicas:
+
+Consultar todos los productos:
+
+```
+db.productos.find()
+```
+
+Consultar todas las categorías:
+
+```
+db.categorias.find()
+```
+
+Consultar todos los clientes:
+
+```
+db.clientes.find()
+```
+
+Paso 5: Actualizar datos
+Supongamos que el producto "Camiseta" ha disminuido su stock. Podemos actualizar el documento correspondiente utilizando el método `updateOne`:
+
+```
+db.productos.updateOne(
+  { nombre: "Camiseta" },
+  { $set: { stock: 40 } }
+)
+```
+
+Esto actualizará el campo "stock" a 40 para el producto con el nombre "Camiseta".
+
+Paso 6: Eliminar datos
+Si deseamos eliminar un producto de la base de datos, podemos utilizar el método `deleteOne`:
+
+```
+db.productos.deleteOne({ nombre: "Camiseta" })
+```
+
+Esto eliminará el producto con el nombre "Camiseta" de la colección "productos".
+
+Estos son solo algunos ejemplos de cómo crear una base de datos MongoDB y aplicar los conceptos básicos. MongoDB ofrece una amplia gama de características y funcionalidades adicionales que puedes explorar, como índices, consultas avanzadas y agregaciones. Te recomiendo consultar
+
+ la documentación oficial de MongoDB para obtener más información y profundizar en estos conceptos. ¡Disfruta aprendiendo MongoDB!

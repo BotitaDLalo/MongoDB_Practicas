@@ -1,0 +1,24 @@
+¡Claro! Aquí tienes 20 ejercicios prácticos para aplicar los conceptos más importantes de MongoDB utilizando la base de datos de la tienda en línea:
+
+1. Insertar múltiples productos en la colección "productos" de una vez.
+2. Consultar todos los productos de una categoría específica.
+3. Consultar los productos con un precio mayor a cierto valor.
+4. Actualizar el precio de todos los productos de una categoría específica.
+5. Eliminar todos los productos que están fuera de stock.
+6. Insertar una nueva categoría en la colección "categorias" junto con su descripción.
+7. Consultar las categorías que tienen al menos 5 productos.
+8. Actualizar la descripción de una categoría específica.
+9. Eliminar una categoría y todos sus productos asociados.
+10. Insertar múltiples clientes en la colección "clientes" de una vez.
+11. Consultar todos los clientes que tienen una dirección específica.
+12. Consultar los clientes cuyo nombre empieza con una letra determinada.
+13. Actualizar el email de un cliente específico.
+14. Eliminar un cliente en base a su dirección de correo electrónico.
+15. Consultar todos los productos ordenados por precio de forma descendente.
+16. Consultar las categorías y contar cuántos productos pertenecen a cada una.
+17. Obtener el cliente con la mayor cantidad de compras (mayor cantidad de documentos en la colección "compras" asociados a su ID).
+18. Consultar los productos que se encuentran en una categoría determinada y tienen un precio entre un rango específico.
+19. Actualizar el stock de un producto en base a las compras realizadas (reducir el stock por la cantidad comprada).
+20. Eliminar todos los clientes que no tienen ninguna compra registrada.
+
+Estos ejercicios te permitirán aplicar los conceptos básicos de MongoDB, como inserción, consulta, actualización y eliminación de datos, así como la utilización de operadores de filtrado, ordenamiento y agregación. Además, te darán una idea de cómo aplicar estos conceptos en situaciones reales. ¡Diviértete practicando con MongoDB!
