@@ -1,4 +1,4 @@
-//!Habilitar autentificacion
+//$Habilitar autentificacion
 /* 
 ?Hay que meterse al archivo mongod.cfg y copiar y pegar lo siguiente:
 *security:
@@ -6,6 +6,7 @@
 */
 
 
+//$Creacion de usuario admin
 use("admin");
 
 db.createUser(
@@ -29,14 +30,38 @@ db.createUser(
  */
 
 /**
- * !Contraseña usuario admin:
+ * $Contraseña usuario myUserAdmin:
  * ? hola1234
- */
+*/
 
+//$Creacion de usuario read admin
+use("admin");
 
-
+db.createUser(
+  {
+    user: "myUserReadAdmin",
+    pwd: passwordPrompt(), // or cleartext password
+    roles: [
+      { role: "read", db: "admin" }
+    ]
+  }
+)
 
 /**
- * !Bibliografia
+ * ?Autentificacion durante la conexion:
+ * * mongosh --port 27017  --authenticationDatabase "admin" -u "myUserReadAdmin" -p
+ * 
+ * ?Autentificacion antes de la conexion:
+ * *use admin
+ * *db.auth("myUserReadAdmin", passwordPrompt()) // or cleartext password
+ */
+
+/**
+ * $Contraseña usuario myUserReadAdmin:
+ * ? hola1234r
+*/
+
+/**
+ * $Bibliografia
  * * Crear usuario admin: https://www.mongodb.com/docs/manual/tutorial/configure-scram-client-authentication/#std-label-create-user-admin
  */
