@@ -34,6 +34,9 @@ db.createUser(
  * ? hola1234
 */
 
+
+
+
 //$Creacion de usuario read admin
 use("admin");
 
@@ -62,6 +65,7 @@ db.createUser(
 */
 
 /**
- * $Bibliografia
- * * Crear usuario admin: https://www.mongodb.com/docs/manual/tutorial/configure-scram-client-authentication/#std-label-create-user-admin
+ * !Bibliografia
+ * * Crear usuario admin: 
+ * * https://www.mongodb.com/docs/manual/tutorial/configure-scram-client-authentication/#std-label-create-user-admin
  */
